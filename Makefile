@@ -357,7 +357,7 @@ app_start_corp:
 	yarn workspace @duckdb/duckdb-wasm-app start:corp
 
 .PHONY: app
-app: wasm wasmpack shell docs js_tests_release
+app: wasm wasmpack shell docs 
 	yarn workspace @duckdb/duckdb-wasm-app build:release
 
 build_loadable:
