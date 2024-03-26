@@ -466,7 +466,6 @@ export abstract class DuckDBBindingsBase implements DuckDBBindings {
         directIO: boolean,
     ): Promise<void> {
         if (protocol === DuckDBDataProtocol.BROWSER_FSACCESS && handle instanceof FileSystemFileHandle) {
-            console.log('getting sync handle!!!!!!!!!!!!!!!!!!');
             // handle is an async handle, should convert to sync handle
             const fileHandle: FileSystemFileHandle = handle as any;
             handle = (await fileHandle.createSyncAccessHandle()) as any;
